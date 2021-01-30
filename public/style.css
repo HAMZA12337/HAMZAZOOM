@@ -1,0 +1,315 @@
+body{
+    background-color: #1C1E20;
+}
+.main {
+    height: 100vh;
+    display: flex;
+}
+
+.main__left {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__right {
+    flex: 0.2
+}
+
+.main__videos {
+    flex-grow: 1;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.main__controls {
+    background-color: #1C1E20;
+}
+
+.main__right {
+    background-color: #242324;
+    border-left: 1px solid #3D3D42;
+}
+
+.main__controls {
+    color: #D2D2D2;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.main__controls__block {
+    display: flex;
+}
+
+.main__controls__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    min-width: 80px;
+    cursor: pointer;
+}
+
+.main__controls__button:hover {
+    background-color: #343434;
+    border-radius: 5px;
+}
+
+.main__controls__button i {
+    font-size: 24px;
+}
+
+.main__right {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__header {
+    padding-top: 5px;
+    color: #F5F5F5;
+    text-align: center;
+}
+
+.main__chat_window {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.messages{
+    color: white;
+    list-style: none;
+}
+
+.main__message_container {
+    padding: 22px 12px;
+    display: flex;
+}
+
+.main__message_container input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: #F5F5F5;
+}
+
+.leave_meeting {
+    color: #EB534B;
+}
+
+.unmute, .stop {
+    color: #CC3B33;
+}
+
+h4{
+color: black;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: cursive;
+font-style: oblique;
+
+}
+p{
+    color: rgb(41, 6, 238);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: cursive;
+    font-style: oblique;   
+    font-size: x-large;
+    
+}
+
+button:hover{
+    background-color:orangered;
+    font-size: larger;
+}
+button{
+    background-color: peru;
+}
+a{
+    color:black;
+}
+
+
+button{
+    width:300px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: cursive;
+font-style: oblique;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  
+  .wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1, h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: normal;
+    padding: 0.5rem 0 0 0;
+  }
+  
+  .main-controls {
+    padding: 0.5rem 0;
+  }
+  
+  canvas {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  #buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #buttons button {
+    font-size: 1rem;
+    padding: 1rem;
+    width: calc(50% - 0.25rem);
+  }
+  
+  button {
+    font-size: 1rem;
+    background: #0088cc;
+    text-align: center;
+    color: white;
+    border: none;
+    transition: all 0.2s;
+    padding: 0.5rem;
+  }
+  
+  button:hover, button:focus {
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1);
+    background: #0ae;
+  }
+  
+  button:active {
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.5);
+    transform: translateY(2px);
+  }
+  
+  
+  /* Make the clips use as much space as possible, and
+   * also show a scrollbar when there are too many clips to show
+   * in the available space */
+  .sound-clips {
+    flex: 1;
+    overflow: auto;
+  }
+  
+  section, article {
+    display: block;
+  }
+  
+  .clip {
+    padding-bottom: 1rem;
+  }
+  
+  audio {
+    width: 100%;
+    display: block;
+    margin: 1rem auto 0.5rem;
+  }
+  
+  .clip p {
+    display: inline-block;
+    font-size: 1rem;
+  }
+  
+  .clip button {
+    font-size: 1rem;
+    float: right;
+  }
+  
+  button.delete {
+    background: #f00;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Checkbox hack to control information box display */
+  
+  label {
+    font-size: 3rem;
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    z-index: 5;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 10px;
+  }
+  
+  input[type=checkbox] {
+     position: absolute;
+     top: -100px;
+  }
+  
+  aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: 0.3s all ease-out;
+    background-color: #efefef;
+    padding: 1rem;
+  }
+  
+  aside p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  aside a {
+    color: #666;
+  }
+  
+  /* Toggled State of information box */
+  input[type=checkbox]:checked ~ aside {
+    transform: translateX(0);
+  }
+  
+  /* Cursor when clip name is clicked over */
+  
+  .clip p {
+    cursor: pointer;
+  }
+  
+  /* Adjustments for wider screens */
+  @media all and (min-width: 800px) {
+    /* Don't take all the space as readability is lost when line length
+       goes past a certain size */
+    .wrapper {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+  span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: cursive;
+    font-style: oblique;   
+    font-size: x-large;
+    color:white;
+  }
+  #je{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: cursive;
+    font-style: oblique;   
+    font-size: x-large;
+    color:white; 
+  }
